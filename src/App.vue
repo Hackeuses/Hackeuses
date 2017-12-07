@@ -1,14 +1,14 @@
 <template>
   <div id="app" class="">
 
-    <div class="row col-lg-6 col-md-6">
-      <app-home class="col-lg-12 col-md-12"></app-home>
+    <div class="row col-sm-6">
+      <app-home class=""></app-home>
     </div>
 
-    <div class="row col-lg-6 col-md-6">
-      <app-Projects class="col-lg-12 col-md-12"></app-Projects>
-      <app-Team class="col-lg-12 col-md-12"></app-Team>
-      <app-Contact class="col-lg-12 col-md-12"></app-Contact>
+    <div class="row col-sm-6">
+      <app-Projects class=""></app-Projects>
+      <app-Team class=""></app-Team>
+      <app-Contact class=""></app-Contact>
     </div>
 
   </div>
@@ -36,7 +36,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 .row{
