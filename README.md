@@ -21,4 +21,4 @@
 > $ git flow init
 
 ### Run:
-> $ npm run start
+> $ npm run dev
