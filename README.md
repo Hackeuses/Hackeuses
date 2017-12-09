@@ -13,31 +13,40 @@
 
 ## Usage:
 
+### Only the repository creator should: 
+> create a local repository with 2 branches: 
+>-master
+>-develop
+
+### Other contributors should clone the Remote Repository:
+>- $ git clone [url_of_the_repository]
+
 ### Git Flow
-> create a local repo
-> - $ cd {repo}
 > - $ git flow init
 
-
-### Clone the Remote Repo
-> - you should clone the repo
-
-### git flow init
--
 > - Which branch should be used for bringing forth production releases?
 > - develop
 Branch name for production releases: [] master
--
+
 > - Which branch should be used for integration of the "next release"?
 > -develop
 > -Branch name for "next release" development: [develop]   
--
-> -And after said yes to init aall of the branch
+
+> -And after said yes to init all of the branch
 
 
+### Work on a branch:
+>- $ git flow feature start [nameOfTheBranch]
+
+#### When you finish working on a branch:
+>- $ git add . 
+>- $ git commit -m "your commit"
+>- $ git pull origin develop
+>- $ git flow feature finish [nameOfTheBranch]
+>- $ git push origin develop
 
 ### Launch Vue:
-> $ npm install
+> - $ npm install
 > - $ npm run dev
 
 
