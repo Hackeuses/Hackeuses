@@ -34,6 +34,9 @@ Branch name for production releases: [] master
 
 > -And after said yes to init all of the branch
 
+### Before working on your own branch, you must pull on the "develop" branch to add the update:
+>- You must be on the develop branch:
+>- $ git pull origin develop
 
 ### Work on a branch:
 >- $ git flow feature start [nameOfTheBranch]
@@ -41,7 +44,6 @@ Branch name for production releases: [] master
 #### When you finish working on a branch:
 >- $ git add . 
 >- $ git commit -m "your commit"
->- $ git pull origin develop
 >- $ git flow feature finish [nameOfTheBranch]
 >- $ git push origin develop
 
