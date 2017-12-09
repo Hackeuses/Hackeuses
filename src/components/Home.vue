@@ -36,7 +36,7 @@ button {
   color: #330922;
   font-family: 'Fira Mono', monospace;
 }
-@media screen and (min-width: 767px)  and (max-width: 1440px) {
+@media screen and (min-width: 767px) {
   .home {
     min-height: 100vh;
     width: 50vw;

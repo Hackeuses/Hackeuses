@@ -27,7 +27,7 @@ export default {
 h3 {
     padding: 0 7px ;
 }
-@media screen and (min-width: 767px)  and (max-width: 1440px) {
+@media screen and (min-width: 767px) {
   .projects{
     height: 40vh;
     width: 50vw;

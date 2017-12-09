@@ -47,7 +47,7 @@ textarea{
   width: 90%;
   border: 2px solid grey;
 }
-@media screen and (min-width: 767px)  and (max-width: 1440px) {
+@media screen and (min-width: 767px) {
   .contact{
     width: 50vw;
   }
