@@ -35,25 +35,36 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  font-family: 'Fira Mono', monospace;
+    text-align: left;
 }
 .container-fluid, .row {
   padding: inherit !important;
   margin: inherit !important;
 }
-@media screen and (min-width: 767px) {
+
+/*for mobile device*/
+@media screen and (max-width: 767px) {
+  .home, .projects, .team {
+    min-height: 100vh;
+  }
+  h3 {
+    margin-top: 20px;
+  }
   p {
     font-size: 12px;
+    padding: 0 7px ;
   }
 }
-/*.row{
-  margin: inherit !important;
-  padding: inherit !important;
+
+@media screen and (min-width: 768px) {
+  .home {
+    min-height: 100vh;
+  }
+  p {
+    font-size: 12px;
+    padding: 0 3% ;
+  }
 }
-h2{
-  margin-top: inherit !important;
-}*/
+
 </style>

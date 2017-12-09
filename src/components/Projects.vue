@@ -10,9 +10,6 @@
         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
          id est laborum.</p>
     </div>
-    <div class="col-12 col-md-12">
-      <button class="btn btn-secondary btn-sm " type="btn" name="button">SEE MORE</button>
-    </div>
   </div>
 </template>
 
@@ -31,10 +28,10 @@ export default {
 /*h3 {
     padding: 0 7px ;
 }*/
-/*@media screen and (min-width: 767px) {
-  .projects{
-    height: 40vh;
-    width: 50vw;
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 14px;
   }
-}*/
+}
+
 </style>

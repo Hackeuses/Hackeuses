@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="form-group col-md-5">
-          <textarea name="comments" rows="8" cols="80" placeholder="Comments *" required></textarea>
+          <textarea name="comments" rows="4" cols="80" placeholder="Comments *" required></textarea>
         </div>
         <div class="form-group submit col-md-2">
           <button class="btn btn-secondary btn-sm" type="submit" name="button">SEND</button>
@@ -33,23 +33,8 @@ export default {
   border: inherit !important;
   border-bottom: 1px solid grey !important;
 }
-/*.submit {
-  text-align: left;
-  padding-left: 15px;
-}
-h3 {
-  text-align: left;
-}*/
-.contact {
-  /*height: 100vh;*/
-}
 textarea{
   width: 90%;
   border: 2px solid grey;
 }
-/*@media screen and (min-width: 767px) {
-  .contact{
-    width: 50vw;
-  }
-}*/
 </style>
