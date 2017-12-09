@@ -15,13 +15,13 @@
 
 ### Git Flow
 > create a local repo
-> $ cd {repo}
-> $ git flow init
+> - $ cd {repo}
+> - $ git flow init
 
 
 ### Clone the Remote Repo
 > you should clone the repo
-> $ npm install
+> - $ npm install
 
 
 ### Run:
