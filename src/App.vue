@@ -1,15 +1,17 @@
 <template>
-  <div id="app" class="">
+  <div id="app" class="container-fluid">
+    <div class="row">
+      <div class="row col-md-6">
+        <app-home class=""></app-home>
+      </div>
 
-    <div class="row col-sm-6">
-      <app-home class=""></app-home>
+      <div class="row col-md-6">
+        <app-Projects class=""></app-Projects>
+        <app-Team class=""></app-Team>
+        <app-Contact class=""></app-Contact>
+      </div>
     </div>
 
-    <div class="row col-sm-6">
-      <app-Projects class=""></app-Projects>
-      <app-Team class=""></app-Team>
-      <app-Contact class=""></app-Contact>
-    </div>
 
   </div>
 </template>
@@ -38,11 +40,20 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-.row{
+.container-fluid, .row {
+  padding: inherit !important;
+  margin: inherit !important;
+}
+@media screen and (min-width: 767px) {
+  p {
+    font-size: 12px;
+  }
+}
+/*.row{
   margin: inherit !important;
   padding: inherit !important;
 }
 h2{
   margin-top: inherit !important;
-}
+}*/
 </style>

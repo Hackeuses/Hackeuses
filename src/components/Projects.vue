@@ -1,7 +1,7 @@
 <template lang="html" class="">
-  <div class="row projects col-sm-6">
-    <h3>Project MeufCode</h3>
-    <div class="">
+  <div class="projects row">
+    <h3 class="col-md-12">Project MeufCode</h3>
+    <div class="col-md-12">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -9,6 +9,9 @@
         esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
          id est laborum.</p>
+    </div>
+    <div class="col-12 col-md-12">
+      <button class="btn btn-secondary btn-sm " type="btn" name="button">SEE MORE</button>
     </div>
   </div>
 </template>
@@ -20,17 +23,18 @@ export default {
 
 <style lang="css">
 .projects {
+  /*min-height: 100vh;*/
   font-family: 'Fira Mono', monospace;
   color: #300922;
   text-align: left;
 }
-h3 {
+/*h3 {
     padding: 0 7px ;
-}
-@media screen and (min-width: 767px) {
+}*/
+/*@media screen and (min-width: 767px) {
   .projects{
     height: 40vh;
     width: 50vw;
   }
-}
+}*/
 </style>
