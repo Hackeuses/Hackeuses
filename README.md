@@ -13,12 +13,16 @@
 
 ## Usage:
 
-### Fork the Repo
-> on your fork you should clone the repo
+### Git Flow
+> create a local repo
+> $ cd {repo}
+> $ git flow init
+
+
+### Clone the Remote Repo
+> you should clone the repo
 > $ npm install
 
-### Git Flow
-> $ git flow init
 
 ### Run:
 > $ npm run dev
