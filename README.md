@@ -20,9 +20,24 @@
 
 
 ### Clone the Remote Repo
-> you should clone the repo
-> - $ npm install
+> - you should clone the repo
+
+### git flow init
+-
+> - Which branch should be used for bringing forth production releases?
+> - develop
+Branch name for production releases: [] master
+-
+> - Which branch should be used for integration of the "next release"?
+> -develop
+> -Branch name for "next release" development: [develop]   
+-
+> -And after said yes to init aall of the branch
 
 
-### Run:
-> $ npm run dev
+
+### Launch Vue:
+> $ npm install
+> - $ npm run dev
+
+
