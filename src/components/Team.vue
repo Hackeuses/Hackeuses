@@ -1,17 +1,17 @@
 <template lang="html" class="">
-  <div class="team row col-12 col-md-12">
+  <div class="team row col-12 col-md-12" >
     <!-- <h3>Team</h3> -->
 
-    <div class="row col-12 col-md-3">
+    <div class="row col-12 col-md-3" v-for="hackeuse in hackeuses">
       <div class="person col-6 col-md-6">
-        <h4>Lutin</h4>
+        <h4>{{ hackeuse.name }}</h4>
         <br>
-        <p>Positive</p>
-        <p>Drôle</p>
+        <p>{{ hackeuse.intro }}</p>
+        <p>{{ hackeuse.text }}</p>
       </div>
       <div class="img col-6 col-md-6"></div>
     </div>
-    <div class="row col-12 col-md-3">
+    <!-- <div class="row col-12 col-md-3">
       <div class="img col-6 col-md-6"></div>
       <div class="person col-6 col-md-6 order-md-first">
         <h4>PolPot</h4>
@@ -73,12 +73,59 @@
         <p>text</p>
         <p>text</p>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 export default {
+  props: ['language'],
+  data () {
+    return {
+      hackeuses: [
+        {
+          name: 'Mahana',
+          intro: 'Folle',
+          text: 'Tatoo'
+        },
+        {
+          name: 'Olivia',
+          intro: 'Miam',
+          text: 'Pouf'
+        },
+        {
+          name: 'Aurélia',
+          intro: 'Grenouille',
+          text: 'Lutin'
+        },
+        {
+          name: 'Carolyn',
+          intro: 'Rousse',
+          text: 'Tennis'
+        },
+        {
+          name: 'Maelle',
+          intro: 'Folle',
+          text: 'Tatoo'
+        },
+        {
+          name: 'Elisa',
+          intro: 'Miam',
+          text: 'Pouf'
+        },
+        {
+          name: 'Laura',
+          intro: 'Grenouille',
+          text: 'Lutin'
+        },
+        {
+          name: 'Hack!',
+          intro: 'Rousse',
+          text: 'Tennis'
+        }
+      ]
+    }
+  }
 }
 </script>
 

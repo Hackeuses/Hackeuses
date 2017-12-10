@@ -2,13 +2,13 @@
   <div id="app" class="container-fluid">
     <div class="row">
       <div class="row col-md-6">
-        <app-home class=""></app-home>
+        <app-home :language="language" @languageWasChanged="language = $event"></app-home>
       </div>
 
       <div class="row col-md-6">
-        <app-Projects class=""></app-Projects>
-        <app-Team class=""></app-Team>
-        <app-Contact class=""></app-Contact>
+        <app-Projects :language="language" @languageWasChanged="language = $event"></app-Projects>
+        <app-Team :language="language" @languageWasChanged="language = $event"></app-Team>
+        <app-Contact :language="language" @languageWasChanged="language = $event"></app-Contact>
       </div>
     </div>
 
@@ -28,8 +28,12 @@ export default {
     appProjects: Projects,
     appContact: Contact,
     appTeam: Team
+  },
+  data () {
+    return {
+      language: false
+    }
   }
-
 }
 </script>
 
