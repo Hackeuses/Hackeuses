@@ -1,10 +1,12 @@
 <template lang="html" class="">
+    <button type="button" name="button">
   <div class="projects row">
     <h3 class="col-md-12">{{ language ? title_project_en : title_project_fr }}</h3>
     <div class="col-md-12">
       <p>{{ language ? description_project_en : description_project_fr}}</p>
     </div>
   </div>
+  </button>
 </template>
 
 <script>

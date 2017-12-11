@@ -11,16 +11,16 @@
       </div>
       <div class="img col-6 col-md-6"></div>
     </div>
-    <!-- <div class="row col-12 col-md-3">
-      <div class="img col-6 col-md-6"></div>
-      <div class="person col-6 col-md-6 order-md-first">
-        <h4>PolPot</h4>
+    <div class="row col-12 col-md-3" v-for="hackeuse in hackeuses_snd_row">
+      <div class="img col-6 col-md-6 order-md-first"></div>
+      <div class="person col-6 col-md-6">
+        <h4>{{ hackeuse.name }}</h4>
         <br>
-        <p>Ambianceuse</p>
-        <p>Folle</p>
+        <p>{{ hackeuse.intro }}</p>
+        <p>{{ hackeuse.text }}</p>
       </div>
     </div>
-    <div class="row col-12 col-md-3">
+    <!-- <div class="row col-12 col-md-3">
       <div class="person col-6 col-md-6">
         <h4>Caro</h4>
         <br>
@@ -82,6 +82,28 @@ export default {
   props: ['language'],
   data () {
     return {
+      hackeuses_snd_row: [
+        {
+          name: 'Maelle',
+          intro: 'Folle',
+          text: 'Tatoo'
+        },
+        {
+          name: 'Elisa',
+          intro: 'Miam',
+          text: 'Pouf'
+        },
+        {
+          name: 'Laura',
+          intro: 'Grenouille',
+          text: 'Lutin'
+        },
+        {
+          name: 'Hack!',
+          intro: 'Rousse',
+          text: 'Tennis'
+        }
+      ],
       hackeuses: [
         {
           name: 'Mahana',
@@ -100,26 +122,6 @@ export default {
         },
         {
           name: 'Carolyn',
-          intro: 'Rousse',
-          text: 'Tennis'
-        },
-        {
-          name: 'Maelle',
-          intro: 'Folle',
-          text: 'Tatoo'
-        },
-        {
-          name: 'Elisa',
-          intro: 'Miam',
-          text: 'Pouf'
-        },
-        {
-          name: 'Laura',
-          intro: 'Grenouille',
-          text: 'Lutin'
-        },
-        {
-          name: 'Hack!',
           intro: 'Rousse',
           text: 'Tennis'
         }
