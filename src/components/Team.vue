@@ -2,17 +2,28 @@
   <div class="team row col-12 col-md-12" >
     <!-- <h3>Team</h3> -->
 
-    <div class="row col-12 col-md-3" v-for="hackeuse in hackeuses">
-      <div class="person col-6 col-md-6">
-        <h4>{{ hackeuse.name }}</h4>
-        <br>
-        <p>{{ hackeuse.intro }}</p>
-        <p>{{ hackeuse.text }}</p>
-      </div>
-      <div class="img col-6 col-md-6"></div>
-    </div>
+    <transition-group
+    tag="ul"
+    class="row col-md-12"
+    >
+    <li class="row col-12 col-md-3"
+      id="zoomTeam"
+      v-for="(hackeuse, index) in hackeuses"
+      :key="index"
+      :class="false"
+      mode="out-in"
+      @click="changeSize(index)">
+        <div class="person col-6 col-md-6">
+          <h4>{{ hackeuse.name }}</h4>
+          <br>
+          <p>{{ hackeuse.intro }}</p>
+          <p>{{ hackeuse.text }}</p>
+        </div>
+        <div class="img col-6 col-md-6"></div>
+    </li>
+  </transition-group>
     <div class="row col-12 col-md-3" v-for="hackeuse in hackeuses_snd_row">
-      <div class="img col-6 col-md-6 order-md-first"></div>
+      <div class="img col-6 col-md-6 order-md-first" ></div>
       <div class="person col-6 col-md-6">
         <h4>{{ hackeuse.name }}</h4>
         <br>
@@ -82,50 +93,69 @@ export default {
   props: ['language'],
   data () {
     return {
+      zoomIn: false,
       hackeuses_snd_row: [
         {
           name: 'Maelle',
-          intro: 'Folle',
-          text: 'Tatoo'
+          intro: 'Sample',
+          text: 'Sample'
         },
         {
           name: 'Elisa',
-          intro: 'Miam',
-          text: 'Pouf'
+          intro: 'Sample',
+          text: 'Sample'
         },
         {
           name: 'Laura',
-          intro: 'Grenouille',
-          text: 'Lutin'
+          intro: 'Sample',
+          text: 'Sample'
         },
         {
           name: 'Hack!',
-          intro: 'Rousse',
-          text: 'Tennis'
+          intro: 'Sample',
+          text: 'Sample'
         }
       ],
       hackeuses: [
         {
           name: 'Mahana',
-          intro: 'Folle',
-          text: 'Tatoo'
+          intro: 'Sample',
+          text: 'Sample'
         },
         {
           name: 'Olivia',
-          intro: 'Miam',
-          text: 'Pouf'
+          intro: 'Sample',
+          text: 'Sample'
         },
         {
           name: 'Aurélia',
-          intro: 'Grenouille',
-          text: 'Lutin'
+          intro: 'Sample',
+          text: 'Sample'
         },
         {
           name: 'Carolyn',
-          intro: 'Rousse',
-          text: 'Tennis'
+          intro: 'Sample',
+          text: 'Sample'
         }
       ]
+    }
+  },
+  methods: {
+    changeSize (index) {
+      console.log(index)
+      this.zoomIn = !this.zoomIn
+      let element = document.getElementById('zoomTeam')
+      if (this.zoomIn) {
+        element.classList.remove('col-md-3')
+        element.classList.add('col-md-12')
+        element.classList.add('zoomIn')
+        // element.classList.add('open')
+      } else {
+        element.classList.add('col-md-3')
+        element.classList.remove('col-md-12')
+        element.classList.remove('zoomIn')
+        // element.classList.add('close')
+      }
     }
   }
 }
@@ -144,6 +174,20 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
+  @keyframes growth {
+    0%   {height: 0%; width: 0%}
+    /*50% {height: 100%; width: 50%}*/
+    100% {height: 200%; width: 100%}
+  }
+
+  .zoomIn {
+    position: absolute;
+    height: 200%;
+    z-index: 200;
+    animation-name: growth;
+    animation-duration: 0.5s;
+  }
+
   .person h4 {
     font-size: 14px;
     text-align: center;
