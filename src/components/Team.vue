@@ -200,7 +200,7 @@ export default {
 }
 
 .img {
-  background-image: url(Hackeuses/dist/static/img/background.3656d53.jpg);
+  background-image: url(./img/background.3656d53.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
